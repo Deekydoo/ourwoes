@@ -11,8 +11,8 @@ app.use(cors()); // Enable CORS for cross-origin requests
 app.use(bodyParser.json()); // Parse incoming JSON requests
 
 // Twilio credentials
-const accountSid = 'AC21441d13c81b83527e7380cf5e17f8a9'; // Replace with your Account SID
-const authToken = 'b4089b2ee1ecb8e9a3c5f70f1c81504c';     // Replace with your Auth Token
+const accountSid = 'insert twilio id here'; // Replace with your Account SID
+const authToken = 'twilio auth token here';     // Replace with your Auth Token
 const client = twilio(accountSid, authToken);
 
 // Create a MySQL connection
@@ -53,20 +53,20 @@ app.get('/api/sms', (req, res) => {
             return;
           }
 
-        // If no duplicates found, insert the message
-        if (results.length === 0) {
-          db.query(sql, [body, from, dateSent], (err, result) => {
-            if (err) {
-              console.error('Error inserting message:', err);
-            } else {
-              console.log('Message inserted:', result.insertId);
-            }
-          });
-        } else {
-          console.log('Duplicate message found, not inserting:', body);
-        }
+          // If no duplicates found, insert the message
+          if (results.length === 0) {
+            db.query(sql, [body, from, dateSent], (err, result) => {
+              if (err) {
+                console.error('Error inserting message:', err);
+              } else {
+                console.log('Message inserted:', result.insertId);
+              }
+            });
+          } else {
+            console.log('Duplicate message found, not inserting:', body);
+          }
+        });
       });
-    });
 
       const messageBodies = filteredMessages.map(m => m.body); // Extract message bodies
       res.json(messageBodies); // Send message bodies as a JSON response
