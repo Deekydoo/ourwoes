@@ -11,35 +11,6 @@ body {
     background-position: center;
 }
 
-/* header {
-    background-color: #333;
-    padding: 1em;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-} */
-
 /* ----------------------------------------------------------------------------------------------------------------------- */
 
 header {
@@ -98,20 +69,14 @@ header {
 /* ----------------------------------------------------------------------------------------------------------------------- */
 
 main {
-    /* max-width: 13000px; */
     position: relative;
     width: 100%;
-    /* margin: 0 auto; */
-    /* padding: 2em; */
     background-color: rgba(21, 20, 68, 0.4);
     backdrop-filter: blur(10px);
 }
 
 .about-us {
     width: 100%;
-    /* padding-top: 10px;
-    padding-bottom: 50px;
-    margin-top: 15px; */
     color: #fff;
     text-align: center;
     height: auto;
@@ -134,7 +99,6 @@ main {
 
 .content {
     width: 100% !important;
-    /* margin: 0px -50% 0px -50% !important; */
     padding: 30px 0px 0px 0px !important;
     justify-items: center;
     background-color: #fff;
